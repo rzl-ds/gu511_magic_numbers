@@ -69,7 +69,7 @@ def calc_magic_number(guid):
 def parse_args():
     """parse command line arguments"""
     parser = argparse.ArgumentParser()
-    parser.add_argument("-g", "--guid", help="your georgetown id")
+    parser.add_argument("-g", "--guid", help="your georgetown id", required=True)
     args = parser.parse_args()
     LOGGER.info("arguments set to {}".format(vars(args)))
     return args
