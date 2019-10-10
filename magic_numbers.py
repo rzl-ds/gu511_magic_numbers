@@ -32,7 +32,7 @@ HERE = os.path.dirname(os.path.realpath(__file__))
 LOGGER = logging.getLogger('magic_numbers')
 LOGCONF = os.path.join(HERE, 'logging.yaml')
 with open(LOGCONF, 'rb') as f:
-    logging.config.dictConfig(yaml.load(f))
+    logging.config.dictConfig(yaml.load(f, Loader=yaml.FullLoader))
 LOGGER.setLevel(logging.INFO)
 
 
